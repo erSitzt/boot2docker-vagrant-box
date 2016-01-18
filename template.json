@@ -1,8 +1,8 @@
 {
     "variables": {
-        "url": "https://github.com/boot2docker/boot2docker/releases/download/v1.7.0/boot2docker.iso",
-        "checksum": "3ebc29aecabc990c4303b9cc6ab26fa8acc673bfbfae3f2fbd8d827c0ff48183",
-        "version": "1.7",
+        "url": "https://github.com/erSitzt/boot2docker/releases/download/v1.9.1/boot2docker.iso",
+	"checksum": "2d5e303bca3fa33684e5c89b06aa06c646877e9f84dd7a61ec698bc3c5e7cb5e",
+        "version": "1.9.1",
         "number": "{{env `ATLAS_BUILD_NUMBER`}}"
     },
 
@@ -16,6 +16,7 @@
         "guest_os_type": "Linux_64",
         "ssh_username": "docker",
         "ssh_password": "tcuser",
+	"headless": true,
         "shutdown_command": "sudo poweroff"
     }, {
         "type": "vmware-iso",
@@ -85,7 +86,7 @@
     },{
         "type": "atlas",
         "only": ["virtualbox-iso"],
-        "artifact": "hashicorp/boot2docker",
+        "artifact": "buehring/boot2docker",
         "artifact_type": "vagrant.box",
         "metadata": {
             "provider": "virtualbox",
@@ -95,7 +96,7 @@
     }]],
 
     "push": {
-        "name": "hashicorp/boot2docker",
+        "name": "buehring/boot2docker",
         "vcs": true
     }
 }
